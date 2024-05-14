@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>My portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="profile">
+            <img src="ben.jpg" alt="profile photo" />
+            <h1>ABDOULMADJID BEN YAHYA</h1>
+        </div>
+        <ul>
+            <a href="#ff"><li>Contact</li></a>
+            <a href="#projet"><li>Mes projets</li></a>
+            <a href="cv ben.pdf"><li>Curriculum Vitale</li></a>
+            <a href="Abdoulmadjid.com" ><li>Blog</li></a>
+        </ul>
+    </nav>
+   
+    <div class="header-text">
+                
+        <h1 style="text-align: center; color: black;" id="scrol">Etudiant en  <span style="color: #ff004f;">licence III informatique </span> a l`Universite de Ngaoundere</h1>
+        <h2 style="text-align: center; color: black;">soiyez les bienvenus </h2>
+        <p> </p>
+    </div>
+     <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="im1.jpg" alt="photo">
+            </div>
+            <div class="item">
+                <img src="im4.jpg" alt="photo">
+            </div>
+            <div class="item">
+                <img src="im3.jpg" alt="photo">
+            </div>
+            <div class="item">
+                <img src="im2.jpg" alt="photo">
+            </div>
+        </div>
+       
+        // Bouton
+     <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+     </div>
+
+      // point de separation des img
+      <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ul>
+     </div>
+        
+    
+    <section id="projet">
+        <div id="aca">
+            <h2 style="color: rgb(234, 127, 238);">Projet Academique</h2>
+            <ul>
+                <li>Creation d`une application mobile de sante(XML,JAVA)</li>
+                <li>Realisation d`une application de gestion de reservation du materiel pedagogique du Departement de Mathematique et informatique de l`Universite de Ngaoundre</li>
+                                    (projet encours ..)
+            </ul>
+        </div>
+        <div id="per">
+            <h2 style="color: rgb(234, 127, 238);">Projet Personnel</h2>
+            <ul></ul>
+                <li>Application de gestion des etudiants(PHP,MySQL)</li>
+                <li>site/Blog peronnel (projet encours)</li>
+            </ul>
+        </div>
+    </section>
+    <footer id="ff">
+        <div id="co">
+            <h1 style="color: rgb(234, 127, 238);">Mes competences</h1>
+            <ul>
+                <li>programmtion web : HTML,CSS,JAVASCRIPT,PHP</li>
+                <li>Resaux : routage statique et dynamique ,configuration des protocole ssh et SMTP</li>
+                <li>OS : windows , linux (Debian)</li>
+            </ul>
+        </div>
+        <div id="info" >
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScPwbG4MPIwROp5r63FMzdNvREmc53sXDayvELY1CIiOQjgrQ/viewform?embedded=true"  width="550px" height="600" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            
+         </div>
+        
+
+    </footer>
+    <section  style="background-color: blue;"> 
+    </section>
+
+    <style>
+        body {
+	margin: 0;
+	font-family: monospace;
+	
+}
+
+nav {
+	height: 100px;
+	display: flex;
+	margin: 0px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(11, 204, 156);
+	position: relative;
+    top: 0;
+	
+	border-bottom: 4px solid rgb(10, 10, 9);
+}
+nav .profile {
+	display: flex;
+	align-items: center;
+}
+nav .profile img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+nav .profile img:hover{
+	width: 80px;
+	height: 80px;
+	
+}
+nav .profile h1 {
+	margin-left: 15px;
+	font-size: 17px;
+	font-style: oblique;
+	
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+	border-top: 3px blueviolet;
+}
+nav ul a{
+	color: black;
+	text-decoration: none;
+	
+	
+}
+nav ul li {
+	margin-left: 8px;
+	cursor: pointer;
+	font-size: 20px;
+	
+	font-family:  Verdana, sans-serif;
+}
+nav ul li:hover {
+	color: rgb(240, 26, 115);
+	
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+	padding-top: 20px;
+    /* background-image:url(Images/background.jpeg) ; */
+    background-size: cover;
+    background-position: center;
+
+}
+
+.header-text{
+    text-align:center;
+}
+#scrol{
+ text-overflow: ellipsis;
+text-overflow: inherit;
+}
+
+
+.slider{
+	width: 100%;
+	height: 400px;
+	position: relative;
+	margin: auto;
+	max-width: 80vw;
+	overflow: hidden;
+}
+.list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	width: max-content;
+	transition: 1s ;
+}
+.list img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	max-width: 80vw;
+
+}
+.buttons{
+	position: absolute;
+	top: 45%;
+	left: 0%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.buttons  button{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgb(185, 176, 167);
+	color: rgb(37, 44, 21);
+	border: none;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.dots{
+	position: absolute;
+	bottom: 10px;
+	color: rgb(40, 43, 15);
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.dots li{
+	list-style: none;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(226, 177, 43);
+	margin: 20px;
+	border-radius: 20px;
+	transition:  1s;
+}
+
+.dots li.active{
+	width: 30px;
+}
+
+
+
+
+#projet{
+	width: 100%;
+	height: 450px;
+	background-color: rgb(100, 93, 107);
+	display: flex;
+	margin-top: 10px;
+	
+}
+#ff {
+	width: 100%;
+	height: max-content;
+	background-color: rgb(133, 111, 111);
+	border-top: 7px solid black;
+	display: flex;
+	margin-top: 3px;
+}
+#aca ,#info{
+	width: 50%;
+	margin-left: 50px;
+	left: 0px;
+	margin-top: 20px;
+
+}
+#per,#co{
+	width: 50%;
+	right: 0px;
+    margin-left: 5px;
+	margin-top: 20px;
+
+}
+
+#form{
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	display: contents;
+	background-color: rgb(139, 201, 180);
+}
+@media screen  and (max-width:700px){
+
+	nav {
+		width: 100%;
+		height: 250px;
+		justify-content: left;
+		min-height: max-content;
+		display: block;
+		margin-left: 0%;
+	  
+
+
+		
+	}
+	nav .profile {
+	margin-top: 0%;
+    width: 100%;
+	height: 40%;
+	
+		
+	}
+	nav ul {
+		
+		display: block;
+		margin-left: 0%;
+		
+	}
+	nav ul:hover{
+		color: rgb(240, 85, 85);
+	}
+	nav .profile img{
+		margin-left: 0%;
+	}
+	#header-text{
+		width: 400px;
+	}
+	.slider{
+		height: 400px;
+	}
+	#aca ,#info{
+		width: 50%;
+		margin-left: 0px;
+		left: 0px;
+		margin-top: 20px;
+	
+	}
+	
+	#ff{
+		display: block;
+		height: max-content;
+		
+	}
+
+    #info iframe{
+		width: 350px;
+	}
+
+}
+    </style>
+    <script>
+        
+let list = document.querySelector('.slider .list')
+let items = document.querySelectorAll('.slider .list .item')
+let dots = document.querySelectorAll('.slider .dots li')
+
+
+let prev = document.getElementById('prev')
+let next = document.getElementById('next')
+
+
+let active = 1
+let lengthItems = items.length - 1;
+
+function reloadSlider(){
+    let checkLeft = items[active].offsetLeft ;
+    list.style.left = -checkLeft + 'px';
+
+    let lastActiveDot = document.querySelector('.slider .dots li.active');
+    lastActiveDot.classList.remove('active');
+    dots[active].classList.add('active');
+    clearInterval(refreshSlider);
+
+    refreshSlider = setInterval(()=>{
+        next.click(),1000
+    });
+}
+
+next.onclick = function(){
+    if(active + 1 > lengthItems){
+        active = 0;
+    }else{
+        active = active + 1 ;
+    }
+    reloadSlider()
+}
+
+
+
+
+prev.onclick = function(){
+    if(active-1 < 0){
+        active = lengthItems;
+    }else{
+        active = active - 1 ;
+    }
+    reloadSlider()
+   
+}
+let refreshSlider = setInterval(()=>{
+    next.click(),3000
+});
+
+dots.forEach((li ,key) => {
+    li.addEvenListener('click',function(){
+        active = key ;
+        reloadSlider();
+    })
+})
+
+    </script>
+</body>
+</html>
